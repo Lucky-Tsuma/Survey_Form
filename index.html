@@ -6,8 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Serif&family=Smooch+Sans:wght@200&display=swap"
+        rel="stylesheet">
 </head>
 <body>
+    <div class="main">
+        <div class="title">
+            <h1 id="title"><b>Cypto Survey Form</b></h1>
+            <p id="description"><i><b>Thank you for taking time to be part of this Survey</b></i></p>
+        </div>
+
+        <div class="form">
+            <form id="survey-form">
+                    <label id="name-label" for="name">Name:</label>
+                    <br /> 
+                    <input type="text" id="name" placeholder="Enter your name" required/>
+                
+                    <label id="email-label" for="email">Email:</label>
+                    <br /> 
+                    <input type="email" id="email" placeholder="Enter your email" required/>
+
+                    <label id="number-label" for="number">Age(Optional):</label>
+                    <br /> 
+                    <input type="number" id="number" min=18 max=70 placeholder="Age" required/>
+
+                    <label for="dropdown">What are your political views?</label>
+                    <br />
+                    <select name="dropdown" id="dropdown" required>
+                        <option selected disabled>Select an option</option>
+                        <option value="Communist">Communist</option>
+                        <option value="Facist">Facist</option>
+                        <option value="Socialist">Socialist</option>
+                        <option value="Conservative">Conservative</option>
+                        <option value="Libertarian">Libertarian</option>
+                        <option value="Anarchist">Anarchist</option>
+                        <option value="Other">Other</option>
+                    </select>  
+                    
+                    <p>Have you ever heard of bitcoin/cryptocurrency?</p>
+                    <input id="know-crypto-yes" type="radio" name="know-crypto" value="know-crypto-yes" required>
+                    <label for="know-crypto-yes">Yes</label>
+                    <br />
+                    <input id="know-crypto-no" type="radio" name="know-crypto" value="know-crypto-no">
+                    <label for="know-crypto-no">No</label>
+
+                    <p>Do you think authorities should be responsible for monitoring policies regulation?</p>
+                    <input id="authorities-monitor-yes" type="radio" name="authorities-monitor" value="authorities-monitor-yes" required>
+                    <label for="authorities-monitor-yes">Yes</label>
+                    <br />
+                    <input id="authorities-monitor-no" type="radio" name="authorities-monitor" value="authorities-monitor-no">
+                    <label for="authorities-monitor-no">No</label>
+                    <br />
+                    <input id="authorities-monitor-no-opinion" type="radio" name="authorities-monitor" value="authorities-monitor-no-opinion">
+                    <label for="authorities-monitor-no-opinion">No opinion</label>
+
+                    <p>What is in your opinion bitcoin/crypto's main constraint as a means of currency?(Select all that apply)</p>
+                    <label for="crime"><input id="crime" type="checkbox" value="constraint" value="crime"> Criminal activity relation</label>
+                    <br />
+                    <label for="volatility"><input id="volatility" type="checkbox" name="constraint" value="volatility"> Extreme volatility</label>
+                    <br />
+                    <label for="computer"><input id="computer" type="checkbox" name="constraint" value="computer"> Exists only in computer</label>
+                    <br />
+                    <label for="merchants"><input id="merchants" type="checkbox" name="constraint" value="merchants"> Few merchants accept it</label>
+                    <br />
+                    <label for="idea"><input id="idea" type="checkbox" name="constraint" value="idea"> No idea</label>
+                    <br /><br />
+
+                    <Label for="suggestion">Give us your suggestion on how to get more people interested in bitcoin/crypto</label>
+                    <textarea placeholder="Type your suggestion here..." id="suggestion" name="suggestion" rows="5" maxlength="200" required></textarea>
+
+                    <button id="submit" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
